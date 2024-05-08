@@ -20,7 +20,7 @@ def send_packets(ip, port, packets):
                 s.sendall(packet.encode())
                 s.close()
                 print("Packet sent to {}:{}".format(ip, port))
-                
+                time.sleep(1)  # Delay between sending packets
         except Exception as e:
             print("Error:", e)
 
@@ -52,7 +52,7 @@ Bitcoin Wallet for Donations: bc1qzmd58zt8za7uzjtgngmg99a69gg04f4knk7mm7
 
     # Keep the main thread alive
     while True:
-        
+        time.sleep(1)
 
 if __name__ == "__main__":
     main()
